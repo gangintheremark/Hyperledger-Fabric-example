@@ -4,7 +4,7 @@ I. **준비물 생성**
   - genesis block 
 
 II. **네트워크 구성**
-  - docker-compose 
+  - docker-compose </br>
 ✔️ 2 organizations ( Org1 and Org2 )</br>
 ✔️ 2 peers ( one peer for each organization )</br>
 ✔️ 2 couchdb ( one couchdb for each peer )</br>
