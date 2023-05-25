@@ -1,0 +1,15 @@
+# ---------------------------------------------------------------------------
+#  peer nodes 관리 
+# ---------------------------------------------------------------------------
+PeerOrgs:
+- Name: Org2
+  Domain: org2.example.com
+  EnableNodeOUs: true
+  Template:
+      Count: 1
+      SANS:
+        - localhost
+        # Start: 5
+        # Hostname: {{.Prefix}}{{.Index}} # default
+  Users:
+      Count: 1
