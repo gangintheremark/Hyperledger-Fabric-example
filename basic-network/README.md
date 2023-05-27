@@ -51,4 +51,4 @@ IMAGE_TAG=latest docker-compose -f $COMPOSE_FILES -f $COMPOSE_FILES_COUCH up -d 
 
 </br>
 
-📝`basic-network/startnetwork.sh`</br>
+📝`basic-network/createchannel.sh`</br>
