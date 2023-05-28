@@ -49,6 +49,8 @@ IMAGE_TAG=latest docker-compose -f $COMPOSE_FILES -f $COMPOSE_FILES_COUCH up -d 
 
 ```
 
+----
+
 </br>
 
 📝`basic-network/createchannel.sh`</br>
@@ -59,7 +61,7 @@ set -x
 configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/${CHANNEL_NAME}.tx -channelID $CHANNEL_NAME
 { set +x; } 2>/dev/null
 ```
-2. channel 트랜잭션을 이용한 channel 생성
+2. channel 트랜잭션을 이용한 **channel 생성**
 ```bash
 export ORDERER_CA=${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 export CORE_PEER_TLS_ENABLED=true
@@ -71,7 +73,7 @@ set -x
 peer channel create -o localhost:7050 -c $CHANNEL_NAME --ordererTLSHostnameOverride orderer.example.com -f ./channel-artifacts/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block --tls --cafile $ORDERER_CA >&log.txt
 { set +x; } 2>/dev/null
 ```
-3. 생성된 채널에 peer 참가 (peer0.org1)
+3. 생성된 채널에 **peer 참가** (peer0.org1)
 ```bash
 export CORE_PEER_TLS_ENABLED=true
 export CORE_PEER_LOCALMSPID="Org1MSP"
@@ -83,7 +85,7 @@ set -x
 peer channel join -b ./channel-artifacts/${CHANNEL_NAME}.block >&log.txt
 { set +x; } 2>/dev/null
 ```
-3. 생성된 채널에 peer 참가 (peer0.org2)
+3. 생성된 채널에 **peer 참가** (peer0.org2)
 ```bash
 infoln "Joining org2 peer to the channel..."
 export CORE_PEER_TLS_ENABLED=true
