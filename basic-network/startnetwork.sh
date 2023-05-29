@@ -15,7 +15,7 @@ function subinfoln() {
 infoln "Tear down running network"
 ./networkdown.sh
 
-# add PATH to ensure we are picking up the correct binaries
+# 올바른 binary file 접근 위한 환경변수 setting !!!!! 
 export PATH=${HOME}/fabric-samples/bin:$PATH
 export FABRIC_CFG_PATH=${PWD}/config
 
