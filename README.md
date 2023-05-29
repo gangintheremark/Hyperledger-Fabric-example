@@ -1,5 +1,5 @@
-# 1주차 네트워크 구동 스크립트
-I. **준비물 생성** 👉 identity, genesis block
+# 1주차 네트워크 구동 
+I. **준비물 생성** 👉 `identity` `genesis block`
   1. organizatons dir : 모든 멤버들의 id들이 생성되는 폴더
   2. channel - artifacts/channel.tx
   3. system-genesis-block / genesis.block
