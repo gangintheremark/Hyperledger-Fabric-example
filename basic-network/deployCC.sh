@@ -22,7 +22,7 @@ CC_VERSION="1"
 CHANNEL_NAME="mychannel"
 
 
-# package the chaincode
+## package the chaincode
 infoln "Packaging chaincode"
 set -x
 peer lifecycle chaincode package ${CC_NAME}.tar.gz --path ${CC_SRC_PATH} --lang ${CC_RUNTIME_LANGUAGE} --label ${CC_NAME}_${CC_VERSION} >&log.txt
