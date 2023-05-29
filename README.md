@@ -20,4 +20,14 @@ III. **채널 구성**
 </br>
 
 # 2주차 chaincode lifecycle
-I. 체인코드 패키징 - 설치 - 승인 - commit 
+1. **package** : chaincode 패키지 생성
+ - .tar.gz 확장자로 패키징됨
+2. **Install** : 각 peer에 패키지 설치
+ - 각 peer에 chaincode 패키지가 물리적으로 설치 
+ - 패키지는 별도의 패키지 id로 관리
+3. **Approve** : 채널 구성원이 설치된 chaincode 정의를 승인
+ - 설치된 패키지 정의에 대하여 채널 구성원이 승인
+ - 승인은 org 단위로 수행하며 정해진 policy를 만족해야함
+4. **Commit** : 한 조직에서 채널에 정의를 commit해 chaincode 활성화
+ - 채널에 정의된 정책을 만족하는 승인이 모이면 하나의 조직에서 commit 가능
+ - commit이 완료되면 각 peer들은 chaincode container를 생성하여 활성화 

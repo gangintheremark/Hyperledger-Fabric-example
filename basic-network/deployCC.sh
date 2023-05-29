@@ -15,7 +15,6 @@ function subinfoln() {
 export PATH=${HOME}/fabric-samples/bin:$PATH
 export FABRIC_CFG_PATH=${PWD}/config
 
-# Chaincode config variable
 CC_NAME="basic"
 CC_SRC_PATH="./chaincode/asset-transfer-basic"
 CC_RUNTIME_LANGUAGE="golang"
@@ -23,7 +22,7 @@ CC_VERSION="1"
 CHANNEL_NAME="mychannel"
 
 
-## package the chaincode
+# package the chaincode
 infoln "Packaging chaincode"
 set -x
 peer lifecycle chaincode package ${CC_NAME}.tar.gz --path ${CC_SRC_PATH} --lang ${CC_RUNTIME_LANGUAGE} --label ${CC_NAME}_${CC_VERSION} >&log.txt
