@@ -21,6 +21,9 @@ COMPOSE_FILES_COUCH=docker/docker-compose-couch.yaml
 IMAGE_TAG=latest docker-compose -f $COMPOSE_FILES -f $COMPOSE_FILES_COUCH up -d 
 ```
 
+![image](https://github.com/gangintheremark/Hyperledger-Fabric-example/assets/81904943/f3c9921d-dd55-4886-a687-cd93825b997e)
+
+
 ***
 
 ### createchannel.sh
@@ -43,6 +46,8 @@ peer channel join -b ./channel-artifacts/${CHANNEL_NAME}.block
 
 # 4.생성된 channel에 peer0.org2 참가
 ```
+
+![image](https://github.com/gangintheremark/Hyperledger-Fabric-example/assets/81904943/a04d3810-9586-47cf-9af6-8161d4afa4f9)
 
 ***
 
@@ -79,6 +84,8 @@ peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride o
 # 5. test
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n ${CC_NAME} $PEER_CONN_PARMS -c '{"function":"InitLedger","Args":[]}'
 ```
+
+![image](https://github.com/gangintheremark/Hyperledger-Fabric-example/assets/81904943/2f79d10a-d85d-471d-8483-1e8947df03ed)
 
 
 
